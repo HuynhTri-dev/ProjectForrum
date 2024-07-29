@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicons -->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/Discuss/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Css files -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>DiscussForrum</title>
+  </head>
+  <body class="index-page">
+    <!-- Header: thanh menu chức năng -->
+    <header>
+      <!-- Menu -->
+      <div class="header">
+        <!-- Logo và tên diễn đàn -->
+        <a href="index.html" class="logo">
+          <img
+            class="logo-img"
+            src="./assets/img/Discuss/logo.png"
+            alt="logo_forrum"
+          />
+          <div class="slogan">
+            <h1 class="sitename">Discuss</h1>
+            <span>Diễn đàn công nghệ</span>
+          </div>
+        </a>
+
+        <!-- Công cụ tìm kiếm -->
+        <form action="#" class="form-search">
+          <input type="search" class="form-control" placeholder="Input place" />
+          <i class="btn-search fa-solid fa-magnifying-glass"></i>
+        </form>
+
+        <!-- Các thanh công cụ -->
+        <nav class="menu">
+          <ul>
+            <li>
+              <a href="./post.html"><i class="fa-solid fa-pen"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </li>
+            <li>
+              <i class="fa-solid fa-bell"></i>
+            </li>
+          </ul>
+        </nav>
+        <!-- Nút đăng nhập -->
+        <!-- <a href="./login.html" class="">Login</a> -->
+
+        <!-- Người dùng -->
+        <div class="profile-box">
+          <!-- <input
+            type="checkbox"
+            id="responsive-menu"
+            onclick="updatemenu()"
+          /><label></label> -->
+          <ul>
+            <li><a class='dropdown-arrow' href='http://'><img class="profile-pic" src="./assets/img/User/user.jpg" alt="user"></a>
+              <ul class='sub-menus'>
+                <li><a href='http://'>Setting</a></li>
+                <li><a href='http://'>Help</a></li>
+                <li><a href='http://'>Comment</a></li>
+                <li><a href='http://'>Log out</a></li>
+              </ul>
+            </li>
+        </div>
+        
+      </div>
+      <!-- Thanh điều hướng -->
+      <nav class="navigation">
+        <ul>
+          <li><a href="./index.html" class="active">Home</a></li>
+          <li><a href="./news.html">News</a></li>
+          <li><a href="./marketplace.html">MarketPlace</a></li>
+          <li><a href="#">Group</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main: nội dung -->
+    <main class="main">
+      <!-- Các topic nổi bật -->
+      <div class="topic-box">
+        <ul>
+          <li><a href="#"># Thiết bị thông minh (Smarter Devices)</a></li>
+          <li><a href="#"># Trí tuệ nhân tạo (AI)</a></li>
+          <li><a href="#"># Lập trình (Program)</a></li>
+          <li><a href="#"># Khởi nghiệp công nghệ (Technology startups)</a></li>
+          <li>
+            <a href="#"># Giải pháp năng lượng mới (New Energy Solutions)</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Tao bai dang -->
+      <div class="post-create-box">
+        <div class="post-create">
+          <div>
+            <img
+              src="./assets/img/User/user.jpg"
+              alt="Avatar"
+              class="profile-pic"
+            />
+          </div>
+          <input
+            type="text"
+            id="post"
+            name="post"
+            placeholder="Đóm ơi, bạn có muốn chia sẻ gì không?"
+          />
+        </div>
+
+        <div class="post-tools">
+          <a class="tool" href="#">
+            <i class="fa-solid fa-video"><strong> Video</strong></i>
+          </a>
+          <a class="tool" href="#"
+            ><i class="fa-solid fa-image"><strong> Image</strong></i></a
+          >
+        </div>
+      </div>
+      <!-- Các bài đăng mới nhất -->
+      <div class="posts-box">
+        <!-- Bai dang 1 -->
+        <div class="posts-structure" href="#">
+          <!-- Thong tin nguoi dang -->
+          <a class="posts-infor">
+            <div class="posts-namePoster">
+              <img
+                class="news-img"
+                src="./assets/img/User/user1.jpg"
+                alt="user1"
+              />
+              <p>Đầu bạc vô dụng</p>
+            </div>
+          </a>
+          <!-- Noi dung bai dang -->
+          <div class="post-content">
+            <h3>
+              Cách các lãnh đạo công ty công nghệ giao tiếp với nhân viên và bên
+              ngoài qua email
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <img src="./assets/img/News/TimCook.webp" alt="tieuDe1" />
+          </div>
+          <!-- Cam xuc / Binh luan -->
+          <div class="comment">
+            <i class="fa-solid fa-thumbs-up"> 99</i>
+            <i class="fa-solid fa-comment">99+</i>
+            <i class="fa-solid fa-share"></i>
+          </div>
+        </div>
+
+        <!-- Bai dang 2 -->
+        <div class="posts-structure" href="#">
+          <!-- Thong tin nguoi dang -->
+          <a class="posts-infor">
+            <div class="posts-namePoster">
+              <img
+                class="news-img"
+                src="./assets/img/User/user2.jpg"
+                alt="user1"
+              />
+              <p>Lobby ác quỷ</p>
+            </div>
+          </a>
+          <!-- Noi dung bai dang -->
+          <div class="post-content">
+            <h3>
+              [QC] Có gì đặc biệt bên trong laptop cao cấp HP Spectre x360 tích
+              hợp bộ xử lý Intel® Core™ Ultra?
+            </h3>
+            <p>
+              HP Spectre x360 AI PC: Laptop cao cấp, thiết kế đẹp, AI thông
+              minh.
+            </p>
+            <img src="./assets/img/News/HP.webp" alt="tieuDe2" />
+          </div>
+          <!-- Cam xuc / Binh luan -->
+          <div class="comment">
+            <i class="fa-solid fa-thumbs-up"> 99</i>
+            <i class="fa-solid fa-comment">99+</i>
+            <i class="fa-solid fa-share"></i>
+          </div>
+        </div>
+
+        <!-- Bai dang 3 -->
+        <div class="posts-structure" href="#">
+          <!-- Thong tin nguoi dang -->
+          <a class="posts-infor">
+            <div class="posts-namePoster">
+              <img
+                class="news-img"
+                src="./assets/img/User/user3.jpg"
+                alt="user1"
+              />
+              <p>Ác quỷ free fire</p>
+            </div>
+          </a>
+          <!-- Noi dung bai dang -->
+          <div class="post-content">
+            <h3>
+              Startup công nghệ: Đường đến thành công phải đi qua thách thức
+            </h3>
+            <p>
+              Startup công nghệ: Thiên đường hay địa ngục? Bài viết này sẽ giúp
+              bạn khám phá những cơ hội và thách thức thực tế khi khởi nghiệp
+              trong lĩnh vực công nghệ
+            </p>
+            <img
+              src="./assets/img/News/startup-cong-nghe.jpg.webp"
+              alt="tieuDe3"
+            />
+          </div>
+          <!-- Cam xuc / Binh luan -->
+          <div class="comment">
+            <i class="fa-solid fa-thumbs-up"> 99</i>
+            <i class="fa-solid fa-comment">99+</i>
+            <i class="fa-solid fa-share"></i>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/forrum/assets/javascript/main.js"></script>
+  </body>
+</html>

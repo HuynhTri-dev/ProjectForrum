@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicons -->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/Discuss/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Css files -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>DiscussForrum</title>
+  </head>
+  <body class="login-page">
+    <div class="wrap">
+      <div class="login-form">
+        <!-- Form dang ky tinh lien ket voi php ma h chưa làm để sau -->
+        <form action="./form/login.php" method="post">
+          <h1 class="form-heading">Login in</h1>
+          <img
+            class="logo-img"
+            src="./assets/img/Discuss/logo_3.png"
+            alt="logo-discuss"
+          />
+          <br />
+
+          <div class="box">
+            <i class="fa-solid fa-user"></i>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Account/Email"
+            /><br />
+          </div>
+
+          <div class="box">
+            <i class="fa-solid fa-lock"></i>
+            <input
+              type="password"
+              id="pass"
+              name="pass"
+              placeholder="Password"
+            /><br />
+          </div>
+          <a class="forget-pass" href="#">Forget your password</a>
+          <br />
+          <button class="button-login" type="submit">
+            <strong>Sign in</strong>
+          </button>
+        </form>
+        <p><strong>- OR -</strong></p>
+        <a class="button-reg" href="#"><strong> Register</strong></a>
+      </div>
+    </div>
+  </body>
+  <script src="./assets/javascript/main.js"></script>
+</html>
