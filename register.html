@@ -32,13 +32,38 @@
           src="./assets/img/Discuss/logo.png"
           alt="logo-discuss"
         />
-        <h1 class="form-heading">Log In</h1>
+        <h1 class="form-heading">Register</h1>
         <!-- Form dang ky tinh lien ket voi php ma h chưa làm để sau -->
-        <!-- <form action="./index.html"> -->
-        <form action="./form/login.php" method="post">
+        <!-- <form action="./login.html"> -->
+        <form action="./form/register.php" method="post">
           <div class="inpux-box">
+            <!-- Lay ho ten -->
             <div class="box">
               <i class="fa-solid fa-user"></i>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Họ và tên"
+                required
+              />
+            </div>
+
+            <!-- Lay so dien thoai -->
+            <div class="box">
+              <i class="fa-solid fa-phone"></i>
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                placeholder="Phone Number"
+                required
+              />
+            </div>
+
+            <!-- Lay email/account -->
+            <div class="box">
+              <i class="fa-solid fa-envelope"></i>
               <input
                 type="text"
                 id="username"
@@ -48,6 +73,7 @@
               />
             </div>
 
+            <!-- Lay mat khau -->
             <div class="box">
               <i class="fa-solid fa-lock"></i>
               <input
@@ -59,17 +85,11 @@
               />
             </div>
           </div>
-          <a class="forget-pass" href="#">Forget your password</a>
-          <br />
           <br />
           <button class="button-login" type="submit">
-            <strong>Sign in</strong>
+            <strong>Register</strong>
           </button>
         </form>
-        <div class="or"><span>- OR -</span></div>
-        <a class="button-reg" href="./register.html"
-          ><strong> Register</strong></a
-        >
       </div>
     </div>
   </body>

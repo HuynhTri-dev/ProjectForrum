@@ -1,172 +1,253 @@
 * {
   margin: 0px;
+  padding: 0px;
   /* position: relative; */
 }
 
 /* Fonts */
 /* Font chữ */
-
 :root {
-  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Poppins", sans-serif;
-  --nav-font: "Poppins", sans-serif;
+  --default-font: "Roboto", sans-serif;
+  --heading-font: "Montserrat", sans-serif;
 }
 
-/* Color */
+/* Color Block */
 :root {
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #2b3137; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: rgb(
-    219,
-    237,
-    253
-  ); /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #2dba4e; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --body-color: rgba(255, 255, 255, 1);
+  --background-color: #f0f0f0;
+  --default-color: #212529;
+  --heading-color: #2b3137;
+  --shadow-color: rgba(0, 0, 0, 0.25);
+  --header-color: rgba(246, 246, 255, 1);
 }
 
 /* Nav Menu Colors */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.6);
-  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0d42ff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --border-button: #ffffff;
+  --background-button: rgba(227, 227, 227, 1);
+  --background-dropdown: #3b5998;
 }
 
-/* Smooth scroll */
-:root {
-  scroll-behavior: smooth;
+body {
+  background-color: var(--body-color);
 }
 
 /* Thuộc tính chung cho body css */
 body {
-  font-family: var(--default-font);
+  scroll-behavior: smooth;
   position: relative;
-}
-
-header {
-  background-color: var(--accent-color);
-  position: sticky;
-  top: 0;
-}
-
-.form-control {
-  width: 400px;
-}
-
-.form-search {
-  height: 36px;
-  position: relative;
-  display: flex;
-  border: 2px solid black;
-  border-radius: 20px;
-  background-color: white;
-}
-
-.form-search input:focus {
-  border: none;
-  border-radius: 20px;
-}
-
-.form-search input {
-  border: none;
-  background-color: transparent;
-}
-
-.form-search .btn-search {
-  color: black;
-  transition: 0.3s;
-  padding: 8px;
-}
-
-.form-search .btn-search:hover {
-  cursor: pointer;
-}
-
-a {
-  text-decoration: none;
 }
 
 a:hover {
-  color: color-mix(in srgb, var(black), transparent 25%);
-  text-decoration: none;
+  color: var(--background-color);
 }
 
 ul {
   list-style-type: none;
 }
 
+strong,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: var(--heading-color);
+  /* color: var(--default-color); */
   font-family: var(--heading-font);
 }
 
-nav {
-  font-family: var(--nav-font);
+a,
+input::placeholder,
+p,
+span {
+  font-family: var(--default-font);
+  color: var(--default-color);
+  text-decoration: none;
 }
 
-/* header css */
-header .header .slogan {
+/* rut gon noi dung */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
-/* logo */
 
+.line-clamp.line-2 {
+  --line: 2;
+}
+
+.line-clamp.line-3 {
+  --line: 3;
+}
+
+/* header/menu css */
 header {
-  justify-content: space-evenly;
+  background-color: var(--background-color);
+  position: sticky;
+  top: -5px;
+  transition: opacity 1s ease-in-out;
+  box-shadow: 0px 4px 4px 0px var(--shadow-color);
 }
 
-.logo-img {
-  height: 50px;
-  border-radius: 50%;
+.logo .logo-img {
+  height: 70px;
+  margin: 0px 5px 0px 20px;
 }
 
 header .header {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  align-items: center;
 }
 
 header .header .logo {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
 }
 
-header .header .menu ul {
+header .header .slogan .sitename {
+  font-size: 25px;
+}
+
+header .header .slogan span {
+  font-size: 15px;
+}
+
+.header .logo:hover {
+  color: var(--default-color);
+}
+
+/* search box */
+.form-search {
+  background-color: var(--background-button);
+  height: 36px;
+  position: relative;
   display: flex;
+  border-radius: 20px;
+  padding: 1px 0px 0px 10px;
 }
 
+.form-control {
+  width: 300px;
+}
+
+.form-search input {
+  border: none;
+  border-radius: 20%;
+  outline: none;
+  background-color: transparent;
+}
+
+.form-search .btn-search,
+.form-search input::placeholder {
+  color: var(--default-color);
+  font-size: 15px;
+}
+.form-search .btn-search {
+  transition: 0.3s;
+  padding: 10px 10px 0px 0px;
+}
+
+.form-search .btn-search:hover {
+  cursor: pointer;
+}
+
+/* navigation box */
+header .navigation {
+  margin: 0px 150px 0px 50px;
+}
 header .navigation ul {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* user */
-
-header .profile-container {
-  position: relative;
+header .navigation li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.main .post-create-box .profile-pic,
-header .profile-box ul .profile-pic {
+header .navigation a {
+  height: 75px;
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .header .navigation .active {
+  border-bottom: 3px solid var(--background-dropdown);
+}
+
+header .header .navigation li:hover {
+  background-color: var(--background-dropdown);
+}
+
+/* cac chuc nang khac */
+
+header .header .menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+}
+header .header .menu div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+header .header .menu div a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .header .menu div {
+  background-color: var(--background-button);
+  border-radius: 50%;
+  margin: 5px;
+}
+
+header .header .menu div:hover {
+  background-color: var(--background-dropdown);
+  color: var(--background-color);
+}
+
+header .header .menu .fa-solid {
+  font-size: 22px;
+}
+
+/* account  */
+header .profile-box .dropdown-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-pic {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   cursor: pointer;
+  margin-right: 10px;
+  object-fit: fill;
 }
 
 header .profile-box ul,
 header .profile-box li {
   margin: 0 auto;
   padding: 0;
-  list-style: none;
 }
 
 header .profile-box ul {
@@ -184,53 +265,25 @@ header .profile-box a {
   line-height: 45px;
   padding: 0 14px;
   text-decoration: none;
-  color: #ffffff;
   font-size: 16px;
 }
 
 header .profile-box a.dropdown-arrow:after {
-  content: "\25BE";
   margin-left: 5px;
 }
-
-header .profile-box li a:hover {
-  color: #0099cc;
-  background: #f2f2f2;
-}
-
-/* header .profile-box input {
-  display: none;
-  margin: 0;
-  padding: 0;
-  height: 45px;
-  width: 100%;
-  opacity: 0;
-  cursor: pointer;
-}
-
-header .profile-box label {
-  display: none;
-  line-height: 45px;
-  text-align: center;
-  position: absolute;
-  left: 35px;
-}
-
-header .profile-box label:before {
-  font-size: 1.6em;
-  color: #ffffff;
-  content: "\2261";
-  margin-left: 20px;
-} */
 
 header .profile-box ul.sub-menus {
   height: auto;
   overflow: hidden;
   width: 170px;
-  background: var(--default-color);
+  background: var(--background-color);
+  border: 1px solid var(--default-color);
   position: absolute;
+  top: 50px;
+  right: 0px;
   z-index: 99;
   display: none;
+  border-radius: 10px;
 }
 
 header .profile-box ul.sub-menus li {
@@ -249,63 +302,346 @@ header .profile-box li:hover ul.sub-menus {
 }
 
 header .profile-box ul.sub-menus a:hover {
-  background: var(--background-color);
-  color: var(--default-color);
+  background: var(--background-dropdown);
+  color: var(--background-color);
 }
 
 /* main css */
+/* Phan trang */
+main {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
 
+main .posts {
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0px 6px 14.3px 0px rgba(0, 0, 0, 0.34);
+}
+
+.main .posts .posts-header,
+main .posts {
+  width: 900px;
+}
+
+.main .posts .posts-header {
+  height: 65px;
+  display: grid;
+  place-items: center;
+  background-color: var(--header-color);
+  margin-bottom: 20px;
+}
+
+/* Ô đăng nội dung */
+main .post-create-box {
+  margin-bottom: 20px;
+}
+
+main .post-create-box .post-create,
+main .post-create-box .post-tools {
+  background-color: var(--background-color);
+  padding: 5px 0px;
+  margin-top: 5px;
+  width: 400px;
+}
+
+main .post-create-box .post-create {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0px 4px 4px 0px var(--shadow-color);
+}
+
+main .posts .post-create-box .post-create input {
+  border: none;
+  width: 300px;
+  height: 35px;
+  border-radius: 20px;
+  padding: 0px 10px;
+  background-color: var(--background-button);
+}
+
+main .post-create-box .post-tools {
+  height: 32px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 4px 4px 0px var(--shadow-color);
+}
+
+main .post-create-box .post-tools .tool {
+  border-radius: 10px;
+  height: 30px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .post-create-box .post-tools .tool:hover {
+  background-color: var(--background-dropdown);
+}
+
+/* Noi dung file */
+/* Khung file */
+.posts-box .post-structure {
+  height: 240px;
+  width: 800px;
+  background-color: var(--background-color);
+  margin-bottom: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 4px 4px 0px var(--shadow-color);
+}
+
+/* anh bai dang */
+.posts-box .post-img {
+  border-radius: 20px;
+  margin: 10px 0px 10px 10px;
+  overflow: hidden;
+  object-fit: cover;
+  height: 175px;
+  width: 250px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.posts-box .post-img:hover {
+  transform: scale(1.2);
+}
+
+/* noi dung bai dang */
+.posts-box .post-structure .post-box {
+  height: 200px;
+  width: 800px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  border-bottom: 3px solid var(--body-color);
+}
+
+.posts-box .post-structure .post-content {
+  margin: 10px;
+}
+
+.posts-box .post-structure .post-content a:hover {
+  color: var(--default-color);
+}
+
+.posts-box .post-structure .post-content .desc-header {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.posts-box .post-structure .post-content .desc {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+/* thong tin nguoi dung */
+.posts-box .post-structure .post-content .post-infor {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
 /* anh nguoi dung */
-.news-img {
+.posts-box .post-structure .post-content .post-infor .poster-img {
   height: 50px;
   width: 50px;
   border-radius: 50%;
+  margin: 0px 10px;
 }
 
-/* footer css */
+/* Khoi cam xuc */
+.posts-box .post-structure .interact {
+  width: 850px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
 
-/* login css */
-.login-page {
-  background: #4568dc; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #b06ab3,
-    #4568dc
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #b06ab3,
-    #4568dc
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  min-height: 90vh;
+.posts-box .post-structure .interact .button-box {
+  width: 100px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 40px;
 }
 
-.login-page .wrap .login-form .logo-img {
-  height: 100px;
+.posts-box .post-structure .interact .button-box button {
+  border: none;
+  margin: 0px 10px;
+}
+
+.posts-box .post-structure .interact .button-box i {
+  font-size: 25px;
+}
+
+.posts-box .post-structure .interact .button-box i:hover {
+  color: var(--background-dropdown);
+}
+
+.posts-box .post-structure .interact .button-box span {
+  margin-top: 5px;
+}
+
+/* Quang cao */
+.box-2 .adver {
+  margin: 10px 0px;
+}
+
+.box-2 .adver img {
+  width: 400px;
+  object-fit: fill;
+}
+
+/* O viet binh luan */
+.main .box-2 #commentForm {
+  width: 390px;
+  height: auto;
+  margin: 20px 0px;
+  background-color: var(--body-color);
+  box-shadow: 0px 6px 14.3px 0px rgba(0, 0, 0, 0.34);
+  border-radius: 20px;
+  padding: 5px;
+  position: fixed;
+  right: 70px;
+  top: 400px;
+}
+
+.main .box-2 #commentForm .comment-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.main .box-2 #commentForm .comment-box input {
+  height: 35px;
+  width: 275px;
+  border: none;
+  border-radius: 20px;
+  padding: 0px 5px;
+  background-color: var(--background-button);
+}
+
+.main .box-2 #commentForm .comment-box button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: var(--background-button);
+  border-radius: 50%;
+}
+
+/* Cac cau binh luan */
+.main .box-2 .comment-watch .comment {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.main .box-2 .comment-watch .comment span {
+  width: 310px;
+  height: auto;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: var(--background-button);
+}
+
+.main .box-2 .comment-watch .more {
+  margin-left: 270px;
+}
+
+.main .box-2 .comment-watch .more:hover {
+  color: var(--background-dropdown);
+}
+
+/* Topic box */
+.main .box-2 .topic-box,
+.main .box-2 .topic-box .topic-header {
+  width: 400px;
+}
+
+.main .box-2 .topic-box {
+  height: auto;
+  width: 400px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 6px 14.3px 0px var(--shadow-color);
+}
+
+.main .box-2 .topic-box .topic-header {
+  height: 65px;
+  display: grid;
+  place-items: center;
+  background-color: var(--header-color);
+  /* margin-bottom: 10px; */
+}
+
+.main .box-2 .topic-box a {
+  font-family: var(--heading-font);
+  font-weight: bold;
+  height: 50px;
+  width: 400px;
+  background-color: var(--background-color);
+  /* margin-bottom: 10px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .box-2 .topic-box a:hover {
+  background-color: var(--background-dropdown);
+}
+
+/* login css */
+.login-page {
+  background: rgba(232, 232, 232, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .login-page .wrap .login-form {
-  min-width: 425px;
-  min-height: 540px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
+  height: 520px;
+  width: 500px;
+  background: var(--background-color);
+  border-radius: 30px;
   text-align: center;
-  flex-grow: 1;
-  padding: 10px;
-  box-shadow: 5px 4px 8px -5px rgba(0, 0, 0, 0.7);
+  box-shadow: 9px 15px 18.1px 0px var(--shadow-color);
+}
+
+.login-page .wrap .login-form .logo-img {
+  position: relative;
+  top: 20px;
+  left: -80px;
+  height: 100px;
 }
 
 .login-page .wrap .login-form .form-heading {
   font-size: 50px;
-  margin-bottom: 10px;
-  color: var(--background-color);
+  font-weight: 700;
+  margin: 30px;
 }
 
 .login-page .wrap .login-form input {
-  min-width: 300px;
+  width: 400px;
+  height: 20px;
   background-color: transparent;
   border: 0;
   outline: 0;
@@ -313,65 +649,157 @@ header .profile-box ul.sub-menus a:hover {
 
 .login-page .wrap .login-form .box {
   display: flex;
-  min-width: 300px;
-  border-bottom: 1px solid #21252971;
-  margin: 20px 50px 5px 40px;
-  border-radius: 2px;
-}
-
-.login-page .wrap .login-form .box ::placeholder {
-  color: #21252971;
-  font-family: var(--nav-font);
+  margin: 10px 50px 0px 50px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: var(--background-button);
 }
 
 .login-page .wrap .login-form .fa-solid {
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .login-page .wrap .login-form .forget-pass {
-  font-family: var(--nav-font);
-  font-size: 15px;
-  margin-top: 50px;
-  margin-left: 170px;
+  font-size: 11px;
+  margin-top: 10px;
+  margin-left: 220px;
 }
 
 .login-page .wrap .login-form .forget-pass:hover {
-  color: var(--heading-color);
-  border-bottom: 1px solid var(--heading-color);
+  font-weight: 700;
+  color: var(--background-dropdown);
+  border-bottom: 1px solid var(--background-dropdown);
 }
 
 .login-page .wrap .login-form .button-login {
   width: 200px;
-  height: 45px;
-  background-color: var(--background-color);
-  font-family: var(--nav-font);
+  height: 50px;
+  background-color: var(--default-color);
+  color: var(--background-color);
+  font-family: var(--heading-font);
   font-size: 20px;
   border: none;
-  border-radius: 20px;
-  margin-top: 10px;
+  border-radius: 30px;
+  transition: transform 0.5s ease-in-out;
 }
 
 .login-page .wrap .login-form .button-reg {
   width: 200px;
-  height: 45px;
-  background-color: var(--background-color);
-  font-family: var(--nav-font);
+  height: 50px;
+  background-color: var(--default-color);
+  color: var(--background-color);
+  font-family: var(--heading-font);
   font-size: 20px;
-  border-radius: 20px;
+  font-weight: 700;
+  border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
+  transition: transform 0.5s ease-in-out;
 }
 
 .login-page .wrap .login-form .button-reg:hover,
 .login-page .wrap .login-form .button-login:hover {
-  background-color: var(--heading-color);
+  transform: scale(1.1);
+  background-color: var(--background-dropdown);
   color: white;
 }
 
 .login-page .wrap .login-form p {
   font-family: var(--nav-font);
   font-size: 20px;
-  margin: 10px;
+}
+
+.login-page .wrap .login-form .or {
+  margin: 5px;
+  font-weight: 700;
+}
+
+/* Css phan group page */
+
+.group-page .group-main {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.group-page .group-main .group-box {
+  width: 50%;
+  height: auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 14px 0px var(--shadow-color);
+}
+
+.group-main .group-box .group-struc {
+  width: 95%;
+  height: auto;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.group-struc .group-img-link {
+  width: 17%;
+}
+
+.group-struc .group-img-link .group-img {
+  width: 70%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: fill;
+}
+
+.group-struc .group-infor {
+  width: 65%;
+}
+
+.group-struc .group-infor .group-name {
+  font-size: 20px;
+}
+
+.group-struc .group-infor .group-name:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--default-color);
+}
+
+.group-struc .follow-button {
+  width: 15%;
+}
+
+.group-struc .follow-button button {
+  width: 100%;
+  height: 40px;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0px 4px 14px 0px var(--shadow-color);
+}
+
+.group-box .more button:hover,
+.group-struc .follow-button button:hover {
+  background-color: var(--background-dropdown);
+  color: var(--header-color);
+}
+
+.group-main .group-box .more {
+  margin-top: 20px;
+  width: 100%;
+  height: 30px;
+}
+
+.group-box .more button {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  font-size: 25px;
+  cursor: pointer;
 }

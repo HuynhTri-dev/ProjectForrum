@@ -15,230 +15,432 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
 
-    <!-- Fonts -->
+    <!-- Fonts chữ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@1,100..900&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
     <!-- Css files -->
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>DiscussForrum</title>
+    <title>DiscussForum</title>
   </head>
+
   <body class="index-page">
+    <script>
+      alert = "Đăng nhập thành công";
+    </script>
     <!-- Header: thanh menu chức năng -->
-    <header>
+    <header id="toolbar">
       <!-- Menu -->
       <div class="header">
         <!-- Logo và tên diễn đàn -->
         <a href="index.html" class="logo">
           <img
             class="logo-img"
-            src="./assets/img/Discuss/logo.png"
+            src="./assets/img/Discuss/favicon.png"
             alt="logo_forrum"
           />
           <div class="slogan">
-            <h1 class="sitename">Discuss</h1>
+            <h1 class="sitename">iscuss</h1>
             <span>Diễn đàn công nghệ</span>
           </div>
         </a>
 
         <!-- Công cụ tìm kiếm -->
         <form action="#" class="form-search">
-          <input type="search" class="form-control" placeholder="Input place" />
+          <input type="search" class="form-control" placeholder="Search" />
           <i class="btn-search fa-solid fa-magnifying-glass"></i>
         </form>
 
-        <!-- Các thanh công cụ -->
-        <nav class="menu">
+        <!-- Thanh điều hướng -->
+        <nav class="navigation">
           <ul>
-            <li>
-              <a href="./post.html"><i class="fa-solid fa-pen"></i></a>
+            <li class="active">
+              <a href="./index.html"><strong>Home</strong></a>
             </li>
             <li>
-              <a href="#"><i class="fa-solid fa-envelope"></i></a>
+              <a href="./news.html"><strong>News</strong></a>
             </li>
             <li>
-              <i class="fa-solid fa-bell"></i>
+              <a href="./marketplace.html"><strong>Market</strong></a>
+            </li>
+            <li>
+              <a href="./group.html"><strong>Group</strong></a>
             </li>
           </ul>
         </nav>
-        <!-- Nút đăng nhập -->
-        <!-- <a href="./login.html" class="">Login</a> -->
+
+        <!-- Các thanh công cụ -->
+        <nav class="menu">
+          <div>
+            <a href="./post.html"><i class="fa-solid fa-pen"></i></a>
+          </div>
+          <div>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+          <div>
+            <a href="#"><i class="fa-solid fa-bell"></i></a>
+          </div>
+        </nav>
 
         <!-- Người dùng -->
         <div class="profile-box">
-          <!-- <input
-            type="checkbox"
-            id="responsive-menu"
-            onclick="updatemenu()"
-          /><label></label> -->
           <ul>
-            <li><a class='dropdown-arrow' href='http://'><img class="profile-pic" src="./assets/img/User/user.jpg" alt="user"></a>
-              <ul class='sub-menus'>
-                <li><a href='http://'>Setting</a></li>
-                <li><a href='http://'>Help</a></li>
-                <li><a href='http://'>Comment</a></li>
-                <li><a href='http://'>Log out</a></li>
+            <li>
+              <a class="dropdown-arrow" href="#"
+                ><img
+                  class="profile-pic"
+                  src="./assets/img/User/user.jpg"
+                  alt="user"
+              /></a>
+              <ul class="sub-menus">
+                <li><a href="http://">Setting</a></li>
+                <li><a href="http://">Help</a></li>
+                <li><a href="http://">Comment</a></li>
+                <li><a href="/login.html">Log out</a></li>
               </ul>
             </li>
+          </ul>
         </div>
-        
       </div>
-      <!-- Thanh điều hướng -->
-      <nav class="navigation">
-        <ul>
-          <li><a href="./index.html" class="active">Home</a></li>
-          <li><a href="./news.html">News</a></li>
-          <li><a href="./marketplace.html">MarketPlace</a></li>
-          <li><a href="#">Group</a></li>
-        </ul>
-      </nav>
     </header>
 
     <!-- Main: nội dung -->
     <main class="main">
-      <!-- Các topic nổi bật -->
-      <div class="topic-box">
-        <ul>
-          <li><a href="#"># Thiết bị thông minh (Smarter Devices)</a></li>
-          <li><a href="#"># Trí tuệ nhân tạo (AI)</a></li>
-          <li><a href="#"># Lập trình (Program)</a></li>
-          <li><a href="#"># Khởi nghiệp công nghệ (Technology startups)</a></li>
-          <li>
-            <a href="#"># Giải pháp năng lượng mới (New Energy Solutions)</a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Tao bai dang -->
-      <div class="post-create-box">
-        <div class="post-create">
-          <div>
-            <img
-              src="./assets/img/User/user.jpg"
-              alt="Avatar"
-              class="profile-pic"
+      <div class="posts">
+        <div class="posts-header">
+          <h1>FORUM DISCUSS</h1>
+        </div>
+        <!-- Tao bai dang -->
+        <div class="post-create-box">
+          <div class="post-create">
+            <div>
+              <img
+                src="./assets/img/User/user.jpg"
+                alt="Avatar"
+                class="profile-pic"
+              />
+            </div>
+            <input
+              type="text"
+              id="post"
+              name="post"
+              placeholder="Đóm ơi, bạn có muốn chia sẻ gì không?"
             />
           </div>
-          <input
-            type="text"
-            id="post"
-            name="post"
-            placeholder="Đóm ơi, bạn có muốn chia sẻ gì không?"
+
+          <div class="post-tools">
+            <a class="tool" href="#">
+              <i class="fa-solid fa-video"><strong> Video</strong></i>
+            </a>
+            <a class="tool" href="#"
+              ><i class="fa-solid fa-image"><strong> Image</strong></i></a
+            >
+          </div>
+        </div>
+        <!-- Các bài đăng mới nhất -->
+        <div class="posts-box">
+          <!-- BAI DANG  -->
+          <div class="post-structure">
+            <!-- anh bai dang -->
+            <div class="post-box">
+              <a href="http://"
+                ><img
+                  class="post-img"
+                  src="./assets/img/Post/toxic-workplace.webp"
+                  alt="tieuDe1"
+              /></a>
+              <!-- Noi dung bai dang -->
+              <div class="post-content">
+                <a href="http://">
+                  <h3 class="desc-header line-clamp line-2">
+                    Toxic là gì? Có ai toxic xung quanh bạn không?
+                  </h3>
+                </a>
+                <p class="desc line-clamp line-3">
+                  Toxic /ˈtäksik/ (tính từ) nghĩa đen chỉ những những chất độc
+                  hại, nghĩa bóng chỉ những điều mang lại cảm giác tiêu cực. Một
+                  mối quan hệ không lành mạnh thường được gọi là toxic
+                  relationship (mối quan hệ độc hại). Kiểu người luôn cáu gắt,
+                </p>
+                <!-- Thong tin nguoi dang -->
+                <a class="post-infor" href="http://">
+                  <p class="desc"><strong>Âm điểm làm người</strong></p>
+                  <img
+                    class="poster-img"
+                    src="./assets/img/User/user8.jpg"
+                    alt="user1"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Cam xuc / Binh luan -->
+            <div class="interact">
+              <div class="button-box">
+                <button class="likeButton" style="color: black">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                </button>
+                <span class="likeCount">70</span>
+              </div>
+              <!--  -->
+              <div class="button-box">
+                <button class="commentButton">
+                  <i class="fa-solid fa-comment"> </i>
+                </button>
+                <span class="commentCount">80</span>
+              </div>
+              <!--  -->
+              <div class="button-box">
+                <button class="shareButton">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- BAI DANG  -->
+          <div class="post-structure">
+            <!-- anh bai dang -->
+            <div class="post-box">
+              <a href="http://"
+                ><img
+                  class="post-img"
+                  src="./assets/img/Post/code
+                  "
+                  alt="tieuDe1"
+              /></a>
+              <!-- Noi dung bai dang -->
+              <div class="post-content">
+                <a href="http://">
+                  <h3 class="desc-header line-clamp line-2">Help me</h3>
+                </a>
+                <p class="desc line-clamp line-3">
+                  Mn giúp em khắc phục lỗi này được không ạ và cách sử dụng vs
+                  để code C++ đc kh ạ
+                </p>
+                <!-- Thong tin nguoi dang -->
+                <a class="post-infor" href="http://">
+                  <p class="desc"><strong>Cương Cướng</strong></p>
+                  <img
+                    class="poster-img"
+                    src="./assets/img/User/user4.jpg"
+                    alt="user"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Cam xuc / Binh luan -->
+            <div class="interact">
+              <div class="button-box">
+                <button class="likeButton" style="color: black">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                </button>
+                <span class="likeCount"> 65</span>
+              </div>
+              <!--  -->
+              <div class="button-box">
+                <button class="commentButton">
+                  <i class="fa-solid fa-comment"> </i>
+                </button>
+                <span class="commentCount">10</span>
+              </div>
+              <!--  -->
+              <div class="button-box">
+                <button class="shareButton">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- BAI DANG  -->
+          <div class="post-structure">
+            <!-- anh bai dang -->
+            <div class="post-box">
+              <a href="http://"
+                ><img
+                  class="post-img"
+                  src="./assets/img/Post/code
+                  "
+                  alt="tieuDe1"
+              /></a>
+              <!-- Noi dung bai dang -->
+              <div id="program" class="post-content">
+                <a href="http://">
+                  <h3 class="desc-header line-clamp line-2"># Program</h3>
+                </a>
+                <p class="desc line-clamp line-3">
+                  Mọi người cho em hỏi là muốn làm hàng loạt cái modal turtorial
+                  giống như thế này thì sẽ phải research như thế nào ạ Em cảm ơn
+                  ❤
+                </p>
+                <!-- Thong tin nguoi dang -->
+                <a class="post-infor" href="http://">
+                  <p class="desc"><strong>HenSan</strong></p>
+                  <img
+                    class="poster-img"
+                    src="./assets/img/User/user7.jpg"
+                    alt="user"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Cam xuc / Binh luan -->
+            <div class="interact">
+              <div class="button-box">
+                <button class="likeButton" style="color: black">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                </button>
+                <span class="likeCount"> 80</span>
+              </div>
+              <!--  -->
+              <div class="button-box">
+                <button class="commentButton">
+                  <i class="fa-solid fa-comment"> </i>
+                </button>
+                <span class="commentCount">10</span>
+              </div>
+              <!--  -->
+              <div class="button-box">
+                <button class="shareButton">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!--  -->
+          <!-- Bai dang 1 -->
+          <div class="post-structure">
+            <!-- anh bai dang -->
+            <div class="post-box">
+              <a href="http://"
+                ><img
+                  class="post-img"
+                  src="./assets/img/Post/TimCook.webp"
+                  alt="tieuDe1"
+              /></a>
+              <!-- Noi dung bai dang -->
+              <div id="startup" class="post-content">
+                <a href="http://">
+                  <h3 class="desc-header line-clamp line-2">
+                    #Startup <br />
+                    Cách tôi lãnh đạo công ty công nghệ từ bờ vực đến bầu trời
+                  </h3>
+                </a>
+                <p class="desc line-clamp line-3">
+                  Khi tôi tiếp quản công ty, mọi thứ đang ở bờ vực sụp đổ. Doanh
+                  thu giảm sút, nhân viên mất tinh thần, và các đối thủ cạnh
+                  tranh ngày càng mạnh mẽ. Tôi nhận ra rằng, để thay đổi tình
+                  hình, chúng ta cần một cuộc cách mạng về tư duy. Thay vì tập
+                  trung vào các sản phẩm cũ, chúng tôi quyết định đầu tư vào
+                  nghiên cứu và phát triển những công nghệ mới, đáp ứng nhu cầu
+                  thực tế của thị trường
+                </p>
+                <!-- Thong tin nguoi dang -->
+                <a class="post-infor" href="http://">
+                  <p class="desc"><strong>Đầu bạc vô dụng</strong></p>
+                  <img
+                    class="poster-img"
+                    src="./assets/img/User/user1.jpg"
+                    alt="user1"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Cam xuc / Binh luan -->
+            <div class="interact">
+              <div class="button-box">
+                <button class="likeButton" style="color: black">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                </button>
+                <span class="likeCount">99</span>
+              </div>
+              <!--  -->
+              <div class="button-box">
+                <button class="commentButton">
+                  <i class="fa-solid fa-comment"> </i>
+                </button>
+                <span class="commentCount">70</span>
+              </div>
+              <!--  -->
+              <div class="button-box">
+                <button class="shareButton">
+                  <i class="fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="box-2">
+        <!-- Các topic nổi bật -->
+        <div class="topic-box">
+          <div class="topic-header">
+            <h1>TOP TOPICS</h1>
+          </div>
+          <nav class="topics">
+            <ul>
+              <li>
+                <a href="#">Smarter Devices</a>
+              </li>
+              <li><a href="#">AI</a></li>
+              <li><a href="#program">Program</a></li>
+              <li>
+                <a href="#startup">Technology startups</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Quang cao -->
+        <div class="adver">
+          <img
+            src="./assets/img/QuangCao/dien-may.png"
+            alt="quang-cao-dien-may"
           />
         </div>
 
-        <div class="post-tools">
-          <a class="tool" href="#">
-            <i class="fa-solid fa-video"><strong> Video</strong></i>
-          </a>
-          <a class="tool" href="#"
-            ><i class="fa-solid fa-image"><strong> Image</strong></i></a
-          >
-        </div>
-      </div>
-      <!-- Các bài đăng mới nhất -->
-      <div class="posts-box">
-        <!-- Bai dang 1 -->
-        <div class="posts-structure" href="#">
-          <!-- Thong tin nguoi dang -->
-          <a class="posts-infor">
-            <div class="posts-namePoster">
-              <img
-                class="news-img"
-                src="./assets/img/User/user1.jpg"
-                alt="user1"
-              />
-              <p>Đầu bạc vô dụng</p>
-            </div>
-          </a>
-          <!-- Noi dung bai dang -->
-          <div class="post-content">
-            <h3>
-              Cách các lãnh đạo công ty công nghệ giao tiếp với nhân viên và bên
-              ngoài qua email
-            </h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            <img src="./assets/img/News/TimCook.webp" alt="tieuDe1" />
-          </div>
-          <!-- Cam xuc / Binh luan -->
-          <div class="comment">
-            <i class="fa-solid fa-thumbs-up"> 99</i>
-            <i class="fa-solid fa-comment">99+</i>
-            <i class="fa-solid fa-share"></i>
-          </div>
-        </div>
-
-        <!-- Bai dang 2 -->
-        <div class="posts-structure" href="#">
-          <!-- Thong tin nguoi dang -->
-          <a class="posts-infor">
-            <div class="posts-namePoster">
-              <img
-                class="news-img"
-                src="./assets/img/User/user2.jpg"
-                alt="user1"
-              />
-              <p>Lobby ác quỷ</p>
-            </div>
-          </a>
-          <!-- Noi dung bai dang -->
-          <div class="post-content">
-            <h3>
-              [QC] Có gì đặc biệt bên trong laptop cao cấp HP Spectre x360 tích
-              hợp bộ xử lý Intel® Core™ Ultra?
-            </h3>
-            <p>
-              HP Spectre x360 AI PC: Laptop cao cấp, thiết kế đẹp, AI thông
-              minh.
-            </p>
-            <img src="./assets/img/News/HP.webp" alt="tieuDe2" />
-          </div>
-          <!-- Cam xuc / Binh luan -->
-          <div class="comment">
-            <i class="fa-solid fa-thumbs-up"> 99</i>
-            <i class="fa-solid fa-comment">99+</i>
-            <i class="fa-solid fa-share"></i>
-          </div>
-        </div>
-
-        <!-- Bai dang 3 -->
-        <div class="posts-structure" href="#">
-          <!-- Thong tin nguoi dang -->
-          <a class="posts-infor">
-            <div class="posts-namePoster">
-              <img
-                class="news-img"
-                src="./assets/img/User/user3.jpg"
-                alt="user1"
-              />
-              <p>Ác quỷ free fire</p>
-            </div>
-          </a>
-          <!-- Noi dung bai dang -->
-          <div class="post-content">
-            <h3>
-              Startup công nghệ: Đường đến thành công phải đi qua thách thức
-            </h3>
-            <p>
-              Startup công nghệ: Thiên đường hay địa ngục? Bài viết này sẽ giúp
-              bạn khám phá những cơ hội và thách thức thực tế khi khởi nghiệp
-              trong lĩnh vực công nghệ
-            </p>
+        <!-- Ô viết bình luận -->
+        <div id="commentForm" style="display: none">
+          <div class="comment-box">
             <img
-              src="./assets/img/News/startup-cong-nghe.jpg.webp"
-              alt="tieuDe3"
+              class="profile-pic"
+              src="./assets/img/User/user.jpg"
+              alt="user"
             />
+            <input type="text" placeholder="Đóm, nhập bình luận ở đây nè" />
+            <button type="submit">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
           </div>
-          <!-- Cam xuc / Binh luan -->
-          <div class="comment">
-            <i class="fa-solid fa-thumbs-up"> 99</i>
-            <i class="fa-solid fa-comment">99+</i>
-            <i class="fa-solid fa-share"></i>
+          <div class="comment-watch">
+            <div class="comment">
+              <img
+                class="profile-pic"
+                src="./assets/img/User/user6.jpg"
+                alt=""
+              />
+              <span class="desc line-clamp line-3">Anh tuyệt vời quá</span>
+            </div>
+            <div class="comment">
+              <img
+                class="profile-pic"
+                src="./assets/img/User/user5.jpg"
+                alt=""
+              />
+              <span class="desc line-clamp line-3"
+                >Em cảm ơn những lời chia sẻ của anh Đầu bạc</span
+              >
+            </div>
+            <a class="more" href="#"><strong>...Xem them</strong></a>
           </div>
         </div>
       </div>
     </main>
-    <script src="/forrum/assets/javascript/main.js"></script>
+    <script src="./assets/javascript/main.js"></script>
   </body>
 </html>

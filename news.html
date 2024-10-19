@@ -22,126 +22,296 @@
     />
     <!-- Css files -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <title>DiscussForrum</title>
   </head>
-
-  <!-- Body -->
-  <body class="news-page">
+  <body>
     <!-- Header: thanh menu chức năng -->
-    <header class="news-header">
+    <header id="toolbar">
       <!-- Menu -->
       <div class="header">
         <!-- Logo và tên diễn đàn -->
         <a href="index.html" class="logo">
           <img
             class="logo-img"
-            src="./assets/img/Discuss/logo.png"
+            src="./assets/img/Discuss/favicon.png"
             alt="logo_forrum"
           />
-          <h1 class="sitename">Discuss</h1>
+          <div class="slogan">
+            <h1 class="sitename">iscuss</h1>
+            <span>Diễn đàn công nghệ</span>
+          </div>
         </a>
 
         <!-- Công cụ tìm kiếm -->
         <form action="#" class="form-search">
-          <input type="search" class="form-control" placeholder="Input place" />
-          <button type="submit" class="btn btn-primary">Search</button>
+          <input type="search" class="form-control" placeholder="Search" />
+          <i class="btn-search fa-solid fa-magnifying-glass"></i>
         </form>
 
-        <!-- Các thanh công cụ -->
-        <nav class="menu">
+        <!-- Thanh điều hướng -->
+        <nav class="navigation">
           <ul>
             <li>
-              <a href="./post.html"><i class="fa-solid fa-pen"></i></a>
+              <a href="./index.html"><strong>Home</strong></a>
+            </li>
+            <li class="active">
+              <a href="./news.html"><strong>News</strong></a>
             </li>
             <li>
-              <a href="#"><i class="fa-solid fa-envelope"></i></a>
+              <a href="./marketplace.html"><strong>Market</strong></a>
             </li>
             <li>
-              <i class="fa-solid fa-bell"></i>
+              <a href="./group.html"><strong>Group</strong></a>
             </li>
           </ul>
         </nav>
-        <!-- Nút đăng nhập -->
-        <a href="./login.html" class="">Login</a>
+
+        <!-- Các thanh công cụ -->
+        <nav class="menu">
+          <div>
+            <a href="./post.html"><i class="fa-solid fa-pen"></i></a>
+          </div>
+          <div>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+          <div>
+            <a href="#"><i class="fa-solid fa-bell"></i></a>
+          </div>
+        </nav>
+
+        <!-- Người dùng -->
+        <div class="profile-box">
+          <ul>
+            <li>
+              <a class="dropdown-arrow" href="#"
+                ><img
+                  class="profile-pic"
+                  src="./assets/img/User/user.jpg"
+                  alt="user"
+              /></a>
+              <ul class="sub-menus">
+                <li><a href="http://">Setting</a></li>
+                <li><a href="http://">Help</a></li>
+                <li><a href="http://">Comment</a></li>
+                <li><a href="/login.html">Log out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
-      <!-- Thanh điều hướng -->
-      <nav class="navigation">
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./news.html" class="active">News</a></li>
-          <li><a href="./marketplace.html">MarketPlace</a></li>
-          <li><a href="#">Topic</a></li>
-        </ul>
-      </nav>
     </header>
 
-    <!-- Main -->
-    <main class="news-main">
-      <!-- Nhung bai dang tieu bieu tung topic -->
-      <div class="news-topic">
-        <h3>Thiết bị thông minh (Smarter Devices)</h3>
-        <!-- Bai dang tieu bieu cua topic Smarter Devices-->
-        <!-- Bai dang 1 -->
-        <a href="#">
-          <div class="news-content">
-            <h4>
-              iPhone 15 thiết kế thay đổi mang đến cảm giác cầm thoải mái, màu
-              sắc trẻ trung
-            </h4>
+    <main id="main">
+      <div class="block1 block">
+        <div id="slider">
+          <input type="radio" name="slider" id="slide1" checked />
+          <input type="radio" name="slider" id="slide2" />
+          <input type="radio" name="slider" id="slide3" />
+          <input type="radio" name="slider" id="slide4" />
+          <div id="slides">
+            <div id="overflow">
+              <div class="inner">
+                <div class="slide slide_1">
+                  <div class="slide-content">
+                    <h2>Bài viết 1</h2>
+                  </div>
+                </div>
+                <div class="slide slide_2">
+                  <div class="slide-content">
+                    <h2>Bài viết 2</h2>
+                  </div>
+                </div>
+                <div class="slide slide_3">
+                  <div class="slide-content">
+                    <h2>Bài viết 3</h2>
+                  </div>
+                </div>
+                <div class="slide slide_4">
+                  <div class="slide-content">
+                    <h2>Bài viết 4</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="controls">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+          </div>
+          <div id="bullets">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+          </div>
+        </div>
+
+        <!-- post_l -->
+
+        <div class="post_reading">
+          <div class="title line-clamp">
+            <h1>
+              Đột phá công nghệ bộ nhớ giúp giảm tới 1.000 lần mức tiêu thụ năng
+              lượng của AI
+            </h1>
+          </div>
+          <img
+            src="./assets/img/New/8407201_tcl-nha-may-thu-dau-mot.webp"
+            alt=""
+          />
+          <div class="desc">
             <p>
-              Dù iPhone 15 Series ra mắt từ tháng 9/2023 nhưng sức hút của những
-              chiếc điện thoại này vẫn chưa hề giảm ở hiện tại, đặc biệt là mẫu
-              iPhone 15
+              <strong>
+                Trí tuệ nhân tạo đi cùng với vấn đề về tiêu thụ năng lượng.
+                Lượng điện tiêu thụ dành cho AI toàn cầu đã tương đương với tổng
+                năng lượng đảo Cyprus dùng trong năm 2021.
+              </strong>
+              <br />
+              Các nhà nghiên cứu kỹ thuật tại Đại học Minnesota Twin Cities vừa
+              phát triển và trình diễn một thiết kế bộ nhớ máy tính mới có thể
+              giảm đáng kể lượng năng lượng mà các hệ thống trí tuệ nhân tạo
+              (AI) tiêu thụ. Nghiên cứu của họ gần đây đã được công bố trên tạp
+              chí Nature, Unconventional Computing. <br />
+              Hầu hết các hệ thống máy tính hiện đại đều được xây dựng trên cái
+              được gọi là kiến ​​trúc Von Neumann, trong đó các hệ thống logic
+              và bộ nhớ con được tách biệt. Khi hoạt động, dữ liệu chuyển qua
+              lại giữa các mô-đun bộ nhớ và bộ xử lý. Đây cũng là nền tảng vận
+              hành cơ bản của máy tính ngày nay.
+              <br />
+              Tuy nhiên, khi tốc độ xử lý nhanh hơn tốc độ vận chuyển dữ liệu ra
+              vào (I/O) thì quá trình truyền dữ liệu trở thành nút thắt cổ chai,
+              ảnh hưởng cả tốc độ xử lý và mức tiêu thụ điện năng. Theo nghiên
+              cứu được đăng tải, việc xáo trộn dữ liệu qua lại tiêu tốn tới 200
+              lần lượng điện năng mà chính các phép tính thực hiện. Để giải
+              quyết vấn đề này, các nhà khoa học tìm cách đưa bộ phận logic và
+              bộ nhớ lại gần nhau hơn về mặt vật lý.
+              <br />
+              Trong khi đó, giải pháp của nhóm nghiên cứu Twin Cities là một
+              thiết kế mới, hoàn toàn kỹ thuật số, được đặt ngay trong bộ nhớ
+              (in-memory), có tên bộ nhớ điện toán truy cập ngẫu nhiên (CRAM).
+              Cụ thể, quy trình tính toán “sẽ được tiến hành tự nhiên ngay trong
+              các ô bộ nhớ mà dữ liệu không cần phải đi ra ngoài”.
+              <br />
+              Để đạt được mục tiêu này, nhóm đã tích hợp trực tiếp lên ô bộ nhớ
+              một linh kiện điện tử mới, dựa trên điện tử học spin
+              (spintronics), từ đó có thể giảm tới 1.000 lần mức tiêu thụ năng
+              lượng của AI.
+              <br />
+              Chưa dừng lại, con số 1.000 lần mới chỉ là mức tối thiểu. Nhóm
+              nghiên cứu đã thử nghiệm CRAM trên tác vụ phân loại chữ số viết
+              tay MNIST và kết quả cho thấy nó "tiết kiệm năng lượng và thời
+              gian lần lượt là 2.500 lần và 1.700 lần so với hệ thống xử lý gần
+              bộ nhớ tại node công nghệ 16 nm". <br />
+              Ngành công nghiệp AI mới nổi đang phải đối mặt với các vấn đề đáng
+              kể về tài nguyên. Các GPU ngày càng nhanh hơn, mạnh hơn và có khả
+              năng hơn hỗ trợ phần mềm AI đang ngốn rất nhiều năng lượng. Ví dụ,
+              Blackwell B200 hàng đầu mới nhất của NVIDIA tiêu thụ tới 1.200W và
+              tạo ra rất nhiều nhiệt thải đến mức cần phải làm mát bằng chất
+              lỏng, một hoạt động tốn nhiều tài nguyên khác.
+              <br />
+              Các gã khổng lồ công nghệ như Google, Amazon và Microsoft đang cố
+              gắng xây dựng cơ sở hạ tầng vật lý cần thiết để thúc đẩy cuộc cách
+              mạng AI sắp tới, đồng nghĩa các trung tâm dữ liệu có quy mô hàng
+              gigawatt, thậm chí một số có nhà máy điện hạt nhân riêng. Do đó,
+              việc tạo ra các tài nguyên tính toán và bộ nhớ tiết kiệm năng
+              lượng hơn sẽ ngày càng trở nên quan trọng đối với khả năng tồn tại
+              lâu dài của công nghệ này. <br />
+              (Theo Vox, Yahoo Tech)
             </p>
           </div>
-          <img src="./assets/img/News/ip15.jpg" alt="Iphone15" />
-        </a>
-        <!-- Bai dang 2 -->
-        <a href="#">
-          <div class="news-content">
-            <h4>
-              Đánh giá 5 tivi Sony mới nhất hiện nay được nhiều người sử dụng
-            </h4>
-            <p>
-              Những mẫu tivi Sony mới nhất hiện nay tích hợp hàng loạt công nghệ
-              tiên tiến không chỉ mang đến hình ảnh sắc nét mà còn tạo dấu ấn
-              bởi âm thanh sống động, thiết kế thông minh.
-            </p>
-          </div>
-          <img src="./assets/img/News/sony-tv.png" alt="SonyTv" />
-        </a>
+        </div>
       </div>
 
-      <!-- Nhung bai dang tieu bieu tung topic -->
-      <div class="news-topic">
-        <h3>Trí tuệ nhân tạo (AI)</h3>
-        <!-- Bai dang tieu bieu cua topic AI-->
-        <!-- Bai dang 1 -->
-        <a href="#">
-          <div class="news-content">
-            <h4>Trí tuệ nhân tạo là lợi ích hay tai họa?</h4>
-            <p>
-              Trong thế giới luôn thay đổi này, công nghệ có thể không có nhược
-              điểm. Tuy nhiên, đó là một huyền thoại. Luôn có một mặt khác của
-              mỗi đồng xu. Trí tuệ nhân tạo có thể xuất hiện để thực hiện tất cả
-              các phép màu, nhưng không ai xem xét đến hậu quả lâu dài.
-            </p>
-          </div>
-          <img src="./assets/img/News/AI.webp" alt="AI" />
-        </a>
-        <!-- Bai dang 2 -->
-        <a href="#">
-          <div class="news-content">
-            <h4>Trí tuệ nhân tạo là gì?</h4>
-            <p>
-              Trí tuệ nhân tạo (AI) là lĩnh vực khoa học máy tính chuyên giải
-              quyết các vấn đề nhận thức thường liên quan đến trí tuệ con người,
-              chẳng hạn như học tập, sáng tạo và nhận diện hình ảnh.
-            </p>
-          </div>
-          <img src="./assets/img/News/what-is-ai.webp" alt="SonyTv" />
-        </a>
+      <div class="block2 block">
+        <div class="new">
+          <a href="https://" class="post_m">
+            <img
+              src="./assets/img/New/8407201_tcl-nha-may-thu-dau-mot.webp"
+              alt=""
+            />
+            <div class="content">
+              <h3 class="title_m line-clamp line-2">
+                TCL của hiện tại: tiềm lực mạnh mẽ từ hai công ty TCL Industries
+                và TCL Technology
+              </h3>
+              <span class="desc line-clamp line-3"
+                >Nếu như TCL Industries được biết đến với các thiết bị điện tử
+                và đồ gia dụng thì TCL Technology tập trung vào phát triển công
+                nghệ và sản xuất các thành phần cốt lõi được sử dụng trong nhiều
+                thiết bị điện tử khác nhau.</span
+              >
+            </div>
+          </a>
+
+          <!--  -->
+          <a href="https://" class="post_s">
+            <img src="./assets/img/New/nivida" alt="anh" />
+            <div class="td_s">
+              <h3 class="title_s line-clamp">
+                Mỹ mở cuộc điều tra chống độc quyền nhằm vào Nvidia
+              </h3>
+              <span class="desc line-clamp line-3">
+                Bộ Tư pháp Mỹ mở cuộc điều tra đối với Nvidia sau khi nhận được
+                khiếu nại công ty sản xuất chip lạm dụng vị thế thống lĩnh thị
+                trường trong việc phát triển chip trí tuệ nhân tạo tiên tiến.
+              </span>
+            </div>
+          </a>
+
+          <!--  -->
+          <a href="https://" class="post_s">
+            <img src="./assets/img/New/misa-1-1314.jpg" alt="anh" />
+            <div class="td_s">
+              <h3 class="title_s line-clamp">
+                CMC Telecom hợp tác chiến lược với MISA
+              </h3>
+              <span class="desc line-clamp line-3">
+                Ngày 1/8, Công ty CP Hạ tầng Viễn thông CMC (CMC Telecom) ký kết
+                hợp tác chiến lược với Công ty CP MISA (MISA). Hai doanh nghiệp
+                sẽ tận dụng thế mạnh của mỗi bên để cung cấp các giải pháp số
+                tiện ích cho khách hàng, mang lại lợi ích cho cộng đồng.
+              </span>
+            </div>
+          </a>
+
+          <!--  -->
+          <a href="https://" class="post_s">
+            <img
+              src="./assets/img/New/apple-store-new-york-epa-779.png"
+              alt="anh"
+            />
+            <div class="td_s">
+              <h3 class="title_s line-clamp">
+                Apple đón tin vui trước thềm ra mắt iPhone 16
+              </h3>
+              <span class="desc line-clamp line-3">
+                Báo cáo kết quả kinh doanh quý II của Apple là điểm sáng hiếm
+                hoi của thị trường công nghệ ngay lúc này, bất chấp doanh số
+                iPhone giảm sút.
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Quang cao -->
+        <div class="quangCao">
+          <img
+            class="adver"
+            src="./assets/img/QuangCao/quang-cao-sua-vinamilk.jpg"
+            alt=""
+          />
+          <img
+            class="adver"
+            src="./assets/img/QuangCao/vingroup-va-hanh-trinh-30-nam-nhung-nguoi-dam-that-bai-de-thanh-cong-20240606160437.jpg"
+            alt=""
+          />
+        </div>
       </div>
     </main>
+
+    <script src="./assets/javascript/main.js"></script>
   </body>
 </html>

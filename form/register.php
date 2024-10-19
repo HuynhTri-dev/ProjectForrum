@@ -7,46 +7,42 @@
 </head>
 <body>
 <?php
+// Kết nối đến cơ sở dữ liệu
 $servername = "localhost";
 $username = "root";
 $password = "tri1109";
 $dbname = "userdb";
 
-// Kết nối đến cơ sở dữ liệu
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
     die("Kết nối thất bại: " . $conn->connect_error);
 }
 
-// Nhận dữ liệu từ yêu cầu đăng nhập
+// Nhận dữ liệu từ yêu cầu đăng ký
 $user = $_POST['username'];
 $pass = $_POST['password'];
 
-
-// Kiểm tra thông tin đăng nhập
+// Kiểm tra xem người dùng đã tồn tại chưa
 $sql = "SELECT * FROM users WHERE username='$user'";
 $result = $conn->query($sql);
 
-if(0 == 0) {
-    if ($user == "hutechtraidep" && $pass == "abcdqwe1asxd123") {
-        header("Location: ../admin.html");
-    }
-}
-
 if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    if (password_verify($pass, $row['password'])) {
-        echo "Đăng nhập thành công!";
-        header("Location: ../index.html");
+    echo "Tên đăng nhập đã tồn tại!";
+} else {
+    $hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
+    $sql = "INSERT INTO users (username, password) VALUES ('$user', '$hashed_pass')";
+    
+    if ($conn->query($sql) === TRUE) {
+        echo "Đăng ký thành công!";
+        header("Location: ../login.html");
     } else {
-        echo "Sai mật khẩu!";
+        echo "Lỗi: " . $sql . "<br>" . $conn->error;
     }
-} else {    
-    echo "Tên đăng nhập không tồn tại!";
 }
 
 $conn->close();
 ?>
+
 </body>
 </html>

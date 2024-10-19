@@ -22,7 +22,140 @@
     />
     <!-- Css files -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/post.css" />
     <title>DiscussForrum</title>
   </head>
-  <body></body>
+  <body>
+    <!-- Header: thanh menu chức năng -->
+    <header id="toolbar">
+      <!-- Menu -->
+      <div class="header">
+        <!-- Logo và tên diễn đàn -->
+        <a href="index.html" class="logo">
+          <img
+            class="logo-img"
+            src="./assets/img/Discuss/favicon.png"
+            alt="logo_forrum"
+          />
+          <div class="slogan">
+            <h1 class="sitename">iscuss</h1>
+            <span>Diễn đàn công nghệ</span>
+          </div>
+        </a>
+
+        <!-- Công cụ tìm kiếm -->
+        <form action="#" class="form-search">
+          <input type="search" class="form-control" placeholder="Search" />
+          <i class="btn-search fa-solid fa-magnifying-glass"></i>
+        </form>
+
+        <!-- Thanh điều hướng -->
+        <nav class="navigation">
+          <ul>
+            <li>
+              <a href="./index.html"><strong>Home</strong></a>
+            </li>
+            <li>
+              <a href="./news.html"><strong>News</strong></a>
+            </li>
+            <li>
+              <a href="./marketplace.html"><strong>Market</strong></a>
+            </li>
+            <li>
+              <a href="./group.html"><strong>Group</strong></a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Các thanh công cụ -->
+        <nav class="menu">
+          <div class="active">
+            <a href="./post.html"><i class="fa-solid fa-pen"></i></a>
+          </div>
+          <div>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+          <div>
+            <a href="#"><i class="fa-solid fa-bell"></i></a>
+          </div>
+        </nav>
+
+        <!-- Người dùng -->
+        <div class="profile-box">
+          <ul>
+            <li>
+              <a class="dropdown-arrow" href="#"
+                ><img
+                  class="profile-pic"
+                  src="./assets/img/User/user.jpg"
+                  alt="user"
+              /></a>
+              <ul class="sub-menus">
+                <li><a href="http://">Setting</a></li>
+                <li><a href="http://">Help</a></li>
+                <li><a href="http://">Comment</a></li>
+                <li><a href="/login.html">Log out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!--  -->
+    <main>
+      <form id="post-main" action="./form/post.php" method="post">
+        <div id="post-body">
+          <div class="content-box">
+            <textarea
+              class="title-input"
+              placeholder="Tiêu đề cho bài viết"
+              maxlength="100"
+              rows="1"
+              cols="100"
+              id="title"
+            ></textarea>
+          </div>
+          <div class="add-image" id="add-image-func">
+            <img id="crFile" style="display: hidden" />
+            <label for="input-file" class="add-image placeholder-main">
+              <svg
+                width="22"
+                height="20"
+                viewBox="0 0 22 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 12v3h3v2h-3v3h-2v-3h-3v-2h3v-3h2zm.008-12c.548 0 .992.445.992.993v9.349A5.99 5.99 0 0 0 18 10V2H2l.001 14 9.292-9.293a1 1 0 0 1 1.32-.084l.093.085 3.546 3.55a6.003 6.003 0 0 0-3.91 7.743L.992 18A.993.993 0 0 1 0 17.007V.993A1 1 0 0 1 .992 0h18.016zM6 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"
+                  fill="#212529"
+                ></path>
+              </svg>
+              <br />
+            </label>
+            <input
+              type="file"
+              id="input-file"
+              style="opacity: 0"
+              accept="image/jpeg, image/png, image/jpg"
+            />
+          </div>
+          <div class="content-box">
+            <textarea
+              class="body-input"
+              placeholder="Nội dung Đóm muốn chia sẻ"
+              maxlength="1000"
+              rows="2"
+              cols="100"
+              id="content"
+            ></textarea>
+          </div>
+          <div class="sub-button">
+            <button id="mySubmit" type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </main>
+    <script src="./assets/javascript/post.js"></script>
+  </body>
 </html>
